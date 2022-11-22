@@ -222,12 +222,11 @@ body {
 }
 .event_post dt {
     font-size: 23px;
-    /* line-height: 1.95; */
 }
 .event_post dd {
     margin-left: 50px;
     font-size: 23px;
-    /* line-height: 1.95; */
+
     display: inline-block;
 
     border-bottom: 1px solid #4f260b;
@@ -294,13 +293,14 @@ small {
 }
 
 /* レスポンシブ */
-@media screen and (max-width: 375px) {
-    .img_pc {
+@media screen and (max-width: 768px) {
+    /* 画像 */
+    /* .img_pc {
         display: none;
     }
     .img_sp {
         display: block;
-    }
+    } */
     /* リード文 */
     .lead {
         margin-bottom: 55px;
@@ -332,14 +332,21 @@ small {
         width: 160px;
         margin: 0 auto;
     }
+    /* 画像の切り替え */
     .about_img {
+        display: none;
+    }
+    .about_sp_img {
+        display: block;
+    }
+    /* .about_img {
         width: 100%;
         padding: initial;
         margin-bottom: 30px;
     }
     .about_img img {
         border-radius: 0;
-    }
+    } */
     .about_title {
         font-size: 36px;
         line-height: 1.25;
@@ -417,6 +424,24 @@ small {
     .pagetop {
         width: 100px;
         right: 11px;
+    }
+}
+
+/* リード文テキスト */
+@media screen and (max-width: 1100px) {
+    .lead .lead_sub_catch {
+        font-size: 25px;
+    }
+    .lead .lead_catch {
+        font-size: 63px;
+    }
+    .lead p {
+        font-size: 18px;
+    }
+
+    /* about */
+    .about .about_title {
+        font-size: 38px;
     }
 }
 
