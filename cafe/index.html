@@ -102,12 +102,16 @@
             <h2><img src="images/gallery@2x.png" alt="GALLERY"></h2>
         </section>
         <div class="gallery_block">
+
             <div class="gallery_img"><img src="images/pc_gallary_05-100.jpg" alt=""></div>
             <div class="gallery_img"><img src="images/pc_gallary_04-100.jpg" alt=""></div>
             <div class="gallery_img"><img src="images/pc_gallary_03-100.jpg" alt=""></div>
             <div class="gallery_img"><img src="images/pc_gallary_02-100.jpg" alt=""></div>
             <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt=""></div>
+            <div class="gallery_img"><img src="images/pc_gallary_01-100.jpg" alt=""></div>
+
         </div>
+
         <section id="event" class="event inner">
             <h2><img src="images/event@2x.png" alt="EVENT"></h2>
             <div class="event_block">
@@ -166,6 +170,18 @@
                 arrows: false,
 
             });
+            $('.gallery_block').slick({
+                slidesToShow: 5,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
         });
     </script>
 </body>

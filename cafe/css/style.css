@@ -412,8 +412,10 @@ small {
         width: 142px;
     }
     .gallery_block {
-        display: block;
         margin-bottom: 33px;
+    }
+    .gallery_img img {
+        width: 100%;
     }
 
     /* event */
@@ -564,7 +566,7 @@ small {
             "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
 }
-
+/* ヘッダースライダー */
 .slick-dots {
     bottom: 20px;
 }
@@ -575,4 +577,25 @@ small {
 }
 .slick-dotted.slick-slider {
     margin-bottom: 0;
+}
+
+/* ギャラリースライダー */
+.slick-next:before {
+    display: none;
+}
+.slick-next {
+    width: 25px;
+    height: 25px;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: rotate(45deg);
+    right: 170px;
+    top: 100px;
+}
+.slick-prev {
+    width: 25px;
+    height: 25px;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: rotate(-135deg);
 }
