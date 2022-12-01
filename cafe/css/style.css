@@ -580,7 +580,8 @@ small {
 }
 
 /* ギャラリースライダー */
-.slick-next:before {
+.slick-next:before,
+.slick-prev::before {
     display: none;
 }
 .slick-next {
@@ -590,7 +591,9 @@ small {
     border-right: 5px solid #fff;
     transform: rotate(45deg);
     right: 170px;
-    top: 100px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 .slick-prev {
     width: 25px;
@@ -598,4 +601,8 @@ small {
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     transform: rotate(-135deg);
+    left: 77px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
