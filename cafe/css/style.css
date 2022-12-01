@@ -581,28 +581,34 @@ small {
 
 /* ギャラリースライダー */
 .slick-next:before,
-.slick-prev::before {
+.slick-prev:before {
     display: none;
 }
+.gallery_block {
+    position: relative;
+}
 .slick-next {
+    position: absolute;
     width: 25px;
     height: 25px;
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     transform: rotate(45deg);
-    right: 170px;
+    right: 20%;
     top: 0;
     bottom: 0;
     margin: auto;
 }
 .slick-prev {
+    position: absolute;
     width: 25px;
     height: 25px;
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     transform: rotate(-135deg);
-    left: 77px;
+    left: 20%;
     top: 0;
     bottom: 0;
     margin: auto;
+    z-index: 100;
 }
