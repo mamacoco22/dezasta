@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #2c2f43;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-feature-settings: "palt";
+    scroll-behavior: smooth;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.5;
+}
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+/* 共通 */
+body {
+    background-color: #d3d4d5;
+}
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* ヘッダー */
+header {
+    background-color: #808b96;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: 40px;
+    align-items: center;
+}
+.header_logo {
+    width: 84px;
+}
+.pc_nav ul {
+    display: flex;
+}
+.pc_nav ul li {
+    color: #f5f5f5;
+    font-size: 16px;
+}
+.pc_nav ul li + li {
+    margin-left: 55px;
+}
+
+/* リード */
+.lead_inner {
+    width: 100%;
+    background-color: #808b96;
+    padding-top: 80px;
+}
+.lead_box {
+    display: flex;
+    max-width: 1000px;
+}
+.lead_img {
+    width: 719px;
+}
+.lead_text {
+    writing-mode: vertical-rl;
+    color: #f5f5f5;
+    font-size: 22px;
+    line-height: 2;
+    letter-spacing: 0.2em;
+}
+footer {
+    background-color: #808b96;
+}
