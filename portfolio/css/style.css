@@ -52,12 +52,20 @@ body {
 .inner {
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 140px;
 }
 .under_text {
     margin-top: 13px;
     text-align: center;
     margin-bottom: 70px;
     color: #6b6d7b;
+}
+.sub_text {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.small_text {
+    font-size: 12px;
 }
 /* ヘッダー */
 header {
@@ -86,17 +94,15 @@ header {
     color: #f5f5f5;
     font-size: 16px;
     padding: 5px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 }
 .pc_nav ul li + li {
     margin-left: 55px;
 }
 /* ホバーした時の下線 */
-.pc_nav ul li a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-}
-a::after {
+.pc_nav ul li::after {
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -108,7 +114,7 @@ a::after {
     transform-origin: left top;
     transition: transform 0.3s;
 }
-a:hover::after {
+.pc_nav ul li:hover::after {
     transform: scale(1, 1);
 }
 
@@ -117,7 +123,7 @@ a:hover::after {
     width: 100%;
     height: 100vh;
     background-color: #808b96;
-    padding-top: 80px;
+    padding-top: 90px;
 }
 .lead_box {
     display: flex;
@@ -134,7 +140,7 @@ a:hover::after {
     font-size: 22px;
     line-height: 2;
     letter-spacing: 0.2em;
-    text-align: right;
+    margin-top: 100px;
 }
 .lead_sns {
     float: right;
@@ -197,6 +203,412 @@ a:hover::after {
     margin: 0 auto;
     margin-top: 120px;
 }
+.about_item {
+    width: 340px;
+    height: 315px;
+}
+.about_title {
+    position: relative;
+    width: 340px;
+    height: 42px;
+}
+.about_number {
+    position: absolute;
+    top: -80%;
+    left: 34%;
+    width: 118px;
+}
+.about_deco {
+    width: 82px;
+    height: 52px;
+    margin: 0 auto;
+}
+.about_title h3 {
+    font-size: 20px;
+    border-top: 1px solid #828185;
+    border-bottom: 1px solid #828185;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.about_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.about_text {
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+}
+
+/* work */
+.work h2 {
+    width: 92px;
+    margin: 0 auto;
+}
+.work_title {
+    font-size: 28px;
+    margin-bottom: 35px;
+    padding: 0.3rem;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.graphic {
+    border-left: 6px solid #99918e;
+}
+.web {
+    border-left: 6px solid #80af9f;
+}
+.top_img {
+    width: 450px;
+}
+.work_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.web_title h4 {
+    border-bottom: 1px solid #828185;
+    padding-bottom: 15px;
+}
+.work_unit,
+.web_title {
+    width: 250px;
+    margin: 0 auto;
+}
+.work_unit p {
+    line-height: 1.5;
+}
+.web_unit {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.mask_graphic {
+    position: relative;
+}
+.hover_mask {
+    width: 420px;
+    height: 270px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f5f5f5;
+    border: solid 15px #99918e;
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+}
+.hover_mask:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
+.btnarrow {
+    /*矢印と下線の基点とするためrelativeを指定*/
+    position: relative;
+    /*形状*/
+    display: inline-block;
+    padding: 0 75px;
+    color: #2c2f43;
+    text-decoration: none;
+    outline: none;
+}
+
+/*矢印と下線の形状*/
+.btnarrow::before {
+    content: "";
+    /*絶対配置で下線の位置を決める*/
+    position: absolute;
+    bottom: -8px;
+    left: 15%;
+    /*下線の形状*/
+    width: 85%;
+    height: 1px;
+    background: #2c2f43;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+}
+
+.btnarrow::after {
+    content: "";
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    /*矢印の形状*/
+    width: 15px;
+    height: 1px;
+    background: #2c2f43;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow:hover::before {
+    left: 20%;
+}
+
+.btnarrow:hover::after {
+    right: -5%;
+}
+.btn_more {
+    text-align: end;
+    margin-top: 120px;
+}
+
+/* skills */
+.skills h2 {
+    width: 112px;
+    margin: 0 auto;
+}
+.skills ul {
+    max-width: 790px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.skills ul li {
+    width: 150px;
+    border-radius: 10px;
+    font-size: 18px;
+    background: #c2c3c7;
+    padding: 1rem 1rem 1rem 2.5rem;
+    position: relative;
+    margin-bottom: 40px;
+}
+.skills ul li:before {
+    position: absolute;
+    top: 27%;
+    left: 20px;
+    width: 3px;
+    height: 50%;
+    content: "";
+    border-radius: 3px;
+    background: #86a7a9;
+}
+/* favorite */
+.favorite {
+    background-color: #808f9a;
+}
+.favorite_inner {
+    max-width: 680px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.favorite h2 {
+    width: 154px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+.favorite .under_text {
+    color: #a6b1b8;
+}
+.favorite .sub_text {
+    color: #f5f5f5;
+}
+.favorite ul {
+    display: flex;
+    justify-content: space-between;
+}
+.favorite ul li {
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 25px;
+    width: 110px;
+    height: 110px;
+}
+.favorite ul li h3 {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    color: #f5f5f5;
+    font-weight: normal;
+    transform: translate(-50%, -50%);
+}
+.favorite ul li p {
+    text-align: center;
+    margin-top: 80px;
+}
+.favorite_icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.favorite_btn {
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+.favorite_btn::before {
+    background: #f5f5f5;
+}
+.favorite_btn::after {
+    background: #f5f5f5;
+}
+
+/* vision */
+.vision h2 {
+    width: 110px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.vision_box {
+    display: flex;
+    justify-content: space-between;
+}
+.vision_text {
+    line-height: 2.9;
+    margin-top: -15px;
+}
+.text_border {
+    border-bottom: 5px solid #86a7a9;
+}
+.vision_img {
+    width: 453px;
+}
+
+/* コンタクトボタン */
+.contact_btn {
+    /*矢印の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    padding: 15px 60px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    background: #86a7a9;
+    letter-spacing: 0.1em;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+.contact_btn:hover {
+    background: #808e99;
+    color: #f5f5f5;
+}
+
+/*矢印と下線の形状*/
+.contact_btn::before {
+    content: "";
+    /*絶対配置で下線の位置を決める*/
+    position: absolute;
+    top: 80%;
+    right: -26px;
+    /*下線の形状*/
+    width: 70px;
+    height: 1px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+.contact_btn::after {
+    content: "";
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: 56%;
+    right: -21px;
+    /*矢印の形状*/
+    width: 1px;
+    height: 12px;
+    background: #333;
+    transform: skewX(45deg);
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際の移動*/
+.contact_btn:hover::before {
+    right: -30px;
+}
+
+.contact_btn:hover::after {
+    right: -25px;
+}
+.contact_inner {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.contact_text {
+    margin-top: 20px;
+}
+
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 120px;
+    bottom: 120px;
+    background: #828185;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+#page_top a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#page_top a::before {
+    position: absolute;
+    content: "";
+    border-top: 2px solid #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+/* フッター */
 footer {
     background-color: #808b96;
+}
+.fnav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+}
+.fnav ul li {
+    color: #f5f5f5;
+    padding: 10px 25px;
+    margin-top: 35px;
+}
+.fnav ul li + li {
+    border-left: 1px solid #f5f5f5;
+}
+.footer_sns {
+    display: flex;
+    justify-content: center;
+}
+.footer_sns li {
+    width: 15px;
+    margin: 75px 10px;
+}
+.footer_copy {
+    font-size: 13px;
+    color: #f5f5f5;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding-bottom: 40px;
+    margin: 0 auto;
 }

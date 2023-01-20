@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mamacoco -portfolio-</title>
     <meta name="description" content="mamacocoのポートフォリオサイトです">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/favicon_mamacoco.png" type="image/png">
 </head>
 
 <body>
@@ -34,8 +36,8 @@
                 <div class="lead_img">
                     <img src="images/firstview_01.jpg" alt="名刺を持ってご挨拶">
                 </div>
-                <p class="lead_text">「もっとこうしたい」<br>「もうちょとこんな感じに」<br>あなたのイメージを<br>
-                    カタチにする<br>お手伝いいたします</p>
+                <p class="lead_text">「もっとこうしたい」<br>「もうちょとこんな感じに」<br>&emsp;あなたのイメージを<br>
+                    &emsp;カタチにする<br>&emsp;お手伝いいたします</p>
             </div>
             <ul class="lead_sns">
                 <li><a href=""><img src="images/instagram_icon_02.png" alt="instagram"></a></li>
@@ -43,57 +45,86 @@
             </ul>
             <div class="scrolldown"><span>SCROLL</span></div>
         </div>
-        <section id="about" class="about inner">
-            <h2><img src="images/about@2x.png" alt="about me"></h2>
+        <section class="about inner">
+            <h2 id="about"><img src="images/about@2x.png" alt="about me"></h2>
             <p class="under_text">私について</p>
-            <p>mamacoco -ままここ-が大切にしている考え方や姿勢をご紹介します</p>
-            <section>
-                <h3>あなただけのデザイン</h3>
-                <p>伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
-                </p>
-                <img src="images/pc_01.png" alt="01">
-                <img src="images/onlyone.png" alt="only one">
-            </section>
-            <section>
-                <h3>優しいデザイン</h3>
-                <p>アクセシビリティ向上を目指し、<br>見やすさ分かりやすさ、<br>使い勝手を意識します</p>
-                <img src="images/pc_02.png" alt="02">
-                <img src="images/universal.png" alt="universal">
-            </section>
-            <section>
-                <h3>上質なデザイン</h3>
-                <p>オリジナリティーを追求できる探求心を忘れずに、自分のレベルをあげる為に新しい事を取り入れて常にスキルアップし、<br>上質のデザインを提供出来るように
-                    <br>心がけています
-                </p>
-                <img src="images/pc_03.png" alt="03">
-                <img src="images/skillup.png" alt="skill up">
-            </section>
-            <section>
-                <h3>丁寧なデザイン</h3>
-                <p>遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
-                <img src="images/pc_04.png" alt="04">
-                <img src="images/essence.png" alt="essence">
-            </section>
+            <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;が大切にしている考え方や姿勢をご紹介します</p>
+            <div class="about_box">
+                <section class="about_item">
+                    <div class="about_deco"><img src="images/onlyone.png" alt="only one"></div>
+                    <div class="about_title">
+                        <h3>あなただけのデザイン</h3>
+                        <div class="about_number"><img src="images/pc_01.png" alt="01"></div>
+                    </div>
+                    <p class="about_text">伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
+                    </p>
+
+                </section>
+                <section class="about_item">
+                    <div class="about_deco"><img src="images/universal.png" alt="universal"></div>
+                    <div class="about_title">
+                        <h3>優しいデザイン</h3>
+                        <div class="about_number"><img src="images/pc_02.png" alt="02"></div>
+                    </div>
+                    <p class="about_text">アクセシビリティ向上を目指し、<br>見やすさ分かりやすさ、<br>使い勝手を意識します</p>
+                </section>
+                <section class="about_item">
+                    <div class="about_deco"><img src="images/skillup.png" alt="skill up"></div>
+                    <div class="about_title">
+                        <h3>上質なデザイン</h3>
+                        <div class="about_number"><img src="images/pc_03.png" alt="03"></div>
+                    </div>
+                    <p class="about_text">オリジナリティーを追求できる探求心を忘れずに、自分のレベルをあげる為に新しい事を取り入れて常にスキルアップし、<br>上質のデザインを提供出来るように
+                        <br>心がけています
+                    </p>
+                </section>
+                <section class="about_item">
+                    <div class="about_deco"><img src="images/essence.png" alt="essence"></div>
+                    <div class="about_title">
+                        <h3>丁寧なデザイン</h3>
+                        <div class="about_number"><img src="images/pc_04.png" alt="04"></div>
+                    </div>
+                    <p class="about_text">遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
+                </section>
+            </div>
         </section>
-        <section class="inner">
+        <section id="work" class="work inner">
             <h2><img src="images/work@2x.png" alt="work"></h2>
             <p class="under_text">制作実績</p>
-            <p>想いやコンセプトを元に、デザインさせて頂きます</p>
-            <h3>graphic</h3>
-            <p>ロゴ、ポスター、印刷物、名刺、<br>その他ご相談ください</p>
-            <img src="images/top_work_01.jpg" alt="">
-            <h3>web</h3>
-            <h4>デザイン</h4>
-            <p>ユーザー目線を忘れずに、<br>世界観を大切にデザイン致します</p>
-            <h4>コーディング</h4>
-            <p>HTML,CSS,jQueryを使い<br>シンプルで動きのあるサイトで<br>ワンランク上のサイトに仕上げます</p>
-            <img src="images/top_work_02.jpg" alt="">
-            <p>more</p>
+            <p class="sub_text">想いやコンセプトを元に、デザインさせて頂きます</p>
+            <h3 class="work_title graphic">graphic</h3>
+            <div class="work_box">
+                <div class="work_unit">
+                    <p>ロゴ、ポスター、印刷物、名刺、<br>その他ご相談ください</p>
+                </div>
+                <div class="top_img mask_graphic"><a href=""><img src="images/top_work_01.jpg" alt=""></a>
+                    <div class="hover_mask">
+                        <p>
+                            グラフィックを見る
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <h3 class="work_title web">web</h3>
+            <div class="work_box">
+                <div class="web_title">
+                    <h4>デザイン</h4>
+                    <p class="web_unit">ユーザー目線を忘れずに、<br>世界観を大切にデザイン致します</p>
+                    <h4>コーディング</h4>
+                    <p class="web_unit">HTML,CSS,jQueryを使い<br>シンプルで動きのあるサイトで<br>ワンランク上のサイトに仕上げます</p>
+                </div>
+                <div class="top_img"><img src="images/top_work_02.jpg" alt=""></div>
+
+            </div>
+            <div class="btn_more">
+                <a href="#" class="btnarrow">more</a>
+            </div>
         </section>
-        <section class="inner">
+        <section id="skills" class="skills inner">
             <h2><img src="images/skills@2x.png" alt="skills"></h2>
             <p class="under_text">できること</p>
-            <p>お客様の環境に応じて対応させて頂きます</p>
+            <p class="sub_text">お客様の環境に応じて対応させて頂きます</p>
             <ul>
                 <li>IIIustrator</li>
                 <li>Photoshop</li>
@@ -106,39 +137,73 @@
                 <li>Studio</li>
             </ul>
         </section>
-        <section class="inner">
-            <h2><img src="images/favorite@2x.png" alt="favorite"></h2>
-            <p>好きなこと</p>
-            <p>mamacoco -ままここ-ってこんな人</p>
-            <h3>描く</h3>
-            <img src="images/top_icon_01@2x.png" alt="ペン先のイラスト">
-            <p>イラスト</p>
-            <h3>考える</h3>
-            <img src="images/top_icon_02@2x.png" alt="ハサミのイラスト">
-            <p>工作</p>
-            <h3>食べる</h3>
-            <img src="images/top_icon_03@2x.png" alt="お茶碗のイラスト">
-            <p>料理</p>
-            <h3>育てる</h3>
-            <img src="images/top_icon_04@2x.png" alt="おたまのイラスト">
-            <p>発酵食品</p>
-            <h3>行く</h3>
-            <img src="images/top_icon_05@2x.png" alt="地図のイラスト">
-            <p>お店開拓</p>
+        <section id="favorite" class="favorite">
+            <div class="favorite_inner">
+                <h2><img src="images/favorite@2x.png" alt="favorite"></h2>
+                <p class="under_text">好きなこと</p>
+                <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;ってこんな人</p>
+                <ul>
+
+                    <li>
+                        <h3>描く</h3>
+                        <div class="favorite_icon"><img src="images/top_icon_01@2x.png" alt="ペン先のイラスト"></div>
+                        <p>イラスト</p>
+                    </li>
+
+
+                    <li>
+                        <h3>考える</h3>
+                        <div class="favorite_icon"><img src="images/top_icon_02@2x.png" alt="ハサミのイラスト"></div>
+                        <p>工作</p>
+                    </li>
+
+
+                    <li>
+                        <h3>食べる</h3>
+                        <div class="favorite_icon"><img src="images/top_icon_03@2x.png" alt="お茶碗のイラスト"></div>
+                        <p>料理</p>
+                    </li>
+
+
+                    <li>
+                        <h3>育てる</h3>
+                        <div class="favorite_icon"><img src="images/top_icon_04@2x.png" alt="おたまのイラスト"></div>
+                        <p>発酵食品</p>
+                    </li>
+
+
+                    <li>
+                        <h3>行く</h3>
+                        <div class="favorite_icon"><img src="images/top_icon_05@2x.png" alt="地図のイラスト"></div>
+                        <p>お店開拓</p>
+                    </li>
+
+                </ul>
+                <div class="btn_more">
+                    <a href="#" class="btnarrow favorite_btn">coming soon</a>
+                </div>
+            </div>
         </section>
-        <section class="inner">
+        <section id="vision" class="vision inner">
             <h2><img src="images/vision@2x.png" alt="vision"></h2>
             <p class="under_text">これから</p>
-            <p>2019年に生まれ育った横浜から岐阜県に引っ越ししました。<br>
-                人のあたたかさと温もりを感じ、またポテンシャルの高さも感じました。<br>
-                昔ながらの伝統を大切に、デザインを通して地域貢献出来たらと思います。<br>
-                あたなが持っている「スキル」と<br>
-                私が持っている「発想力」と「デザイン」を<br>
-                掛け合わせて地域を盛り上げられたらと思います。<br>
-                もちろん岐阜県以外の方も！お気軽にお声かけください！</p>
-            <img src="images/vision_02@2x-80.jpg" alt="">
-        </section>
+            <div class="vision_box">
+                <p class="vision_text">2019年に生まれ育った横浜から岐阜県に引っ越ししました。<br>
+                    人のあたたかさと温もりを感じ、またポテンシャルの高さも感じました。<br>
+                    昔ながらの伝統を大切に、デザインを通して地域貢献出来たらと思います。<br>
+                    あたなが持っている<span class="text_border">「スキル」</span>と<br>
+                    私が持っている<span class="text_border">「発想力」と「デザイン」</span>を<br>
+                    掛け合わせて地域を盛り上げられたらと思います。<br>
+                    もちろん岐阜県以外の方も！お気軽にお声かけください！</p>
+                <div class="vision_img"><img src="images/vision_02@2x-80.jpg" alt=""></div>
+            </div>
 
+        </section>
+        <div class="contact_inner">
+            <a href="" class="contact_btn">声をかけてみる</a>
+            <p class="contact_text">ここまで見て頂きありがとうございます！</p>
+        </div>
+        <div id="page_top"><a href="#"></a></div>
     </main>
 
     <footer>
@@ -152,9 +217,9 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
-        <ul>
-            <li><img src="images/instagram_icon_02.png" alt="instagram"></li>
-            <li><img src="images/twitter_icon_02@2x.png" alt="twitter"></li>
+        <ul class="footer_sns">
+            <li><a href=""><img src="images/instagram_icon_02.png" alt="instagram"></a></li>
+            <li><a href=""><img src="images/twitter_icon_02@2x.png" alt="twitter"></a></li>
         </ul>
         <p class="footer_copy"><small>&copy;mamacocodesign</small></p>
     </footer>
