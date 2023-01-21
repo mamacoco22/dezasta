@@ -10,7 +10,10 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-192x192.png">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -18,6 +21,17 @@
         <div class="header_wrap">
             <h1 class="header_logo"><a href=""><img src="images/mamacoco_logo@2x.png" alt="mamacoco"></a></h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">about me</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#favorite">favorite</a></li>
+                    <li><a href="#vision">vision</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">about me</a></li>
                     <li><a href="#work">work</a></li>
@@ -45,68 +59,75 @@
             </ul>
             <div class="scrolldown"><span>SCROLL</span></div>
         </div>
-        <section class="about inner">
-            <h2 id="about"><img src="images/about@2x.png" alt="about me"></h2>
-            <p class="under_text">私について</p>
-            <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;が大切にしている考え方や姿勢をご紹介します</p>
-            <div class="about_box">
-                <section class="about_item">
-                    <div class="about_deco"><img src="images/onlyone.png" alt="only one"></div>
-                    <div class="about_title">
-                        <h3>あなただけのデザイン</h3>
-                        <div class="about_number"><img src="images/pc_01.png" alt="01"></div>
-                    </div>
-                    <p class="about_text">伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
-                    </p>
+        <div class="side_inner">
+            <section class="about inner">
+                <div class="side"><img src="images/side_about.png" alt=""></div>
+                <h2 id="about"><img src="images/about@2x.png" alt="about me"></h2>
+                <p class="under_text">私について</p>
+                <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;が大切にしている考え方や姿勢をご紹介します</p>
+                <div class="about_box">
+                    <section class="about_item">
+                        <div class="about_deco"><img src="images/onlyone.png" alt="only one"></div>
+                        <div class="about_title">
+                            <h3>あなただけのデザイン</h3>
+                            <div class="about_number"><img src="images/pc_01.png" alt="01"></div>
+                        </div>
+                        <p class="about_text">伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
+                        </p>
 
-                </section>
-                <section class="about_item">
-                    <div class="about_deco"><img src="images/universal.png" alt="universal"></div>
-                    <div class="about_title">
-                        <h3>優しいデザイン</h3>
-                        <div class="about_number"><img src="images/pc_02.png" alt="02"></div>
-                    </div>
-                    <p class="about_text">アクセシビリティ向上を目指し、<br>見やすさ分かりやすさ、<br>使い勝手を意識します</p>
-                </section>
-                <section class="about_item">
-                    <div class="about_deco"><img src="images/skillup.png" alt="skill up"></div>
-                    <div class="about_title">
-                        <h3>上質なデザイン</h3>
-                        <div class="about_number"><img src="images/pc_03.png" alt="03"></div>
-                    </div>
-                    <p class="about_text">オリジナリティーを追求できる探求心を忘れずに、自分のレベルをあげる為に新しい事を取り入れて常にスキルアップし、<br>上質のデザインを提供出来るように
-                        <br>心がけています
-                    </p>
-                </section>
-                <section class="about_item">
-                    <div class="about_deco"><img src="images/essence.png" alt="essence"></div>
-                    <div class="about_title">
-                        <h3>丁寧なデザイン</h3>
-                        <div class="about_number"><img src="images/pc_04.png" alt="04"></div>
-                    </div>
-                    <p class="about_text">遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
-                </section>
-            </div>
-        </section>
+                    </section>
+                    <section class="about_item">
+                        <div class="about_deco about_deco_univ"><img src="images/universal.png" alt="universal"></div>
+                        <div class="about_title">
+                            <h3>優しいデザイン</h3>
+                            <div class="about_number"><img src="images/pc_02.png" alt="02"></div>
+                        </div>
+                        <p class="about_text">アクセシビリティ向上を目指し、<br>見やすさ分かりやすさ、<br>使い勝手を意識します</p>
+                    </section>
+                    <section class="about_item">
+                        <div class="about_deco"><img src="images/skillup.png" alt="skill up"></div>
+                        <div class="about_title">
+                            <h3>上質なデザイン</h3>
+                            <div class="about_number"><img src="images/pc_03.png" alt="03"></div>
+                        </div>
+                        <p class="about_text">
+                            オリジナリティーを追求できる探求心を忘れずに、自分のレベルをあげる為に新しい事を取り入れて常にスキルアップし、<br>上質のデザインを提供出来るように
+                            <br>心がけています
+                        </p>
+                    </section>
+                    <section class="about_item">
+                        <div class="about_deco"><img src="images/essence.png" alt="essence"></div>
+                        <div class="about_title">
+                            <h3>丁寧なデザイン</h3>
+                            <div class="about_number"><img src="images/pc_04.png" alt="04"></div>
+                        </div>
+                        <p class="about_text">遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
+                    </section>
+                </div>
+            </section>
+        </div>
         <section id="work" class="work inner">
+            <div class="side"><img src="images/side_work.png" alt=""></div>
+
             <h2><img src="images/work@2x.png" alt="work"></h2>
             <p class="under_text">制作実績</p>
             <p class="sub_text">想いやコンセプトを元に、デザインさせて頂きます</p>
-            <h3 class="work_title graphic">graphic</h3>
+            <h3 class="work_title graphic">Graphic</h3>
             <div class="work_box">
                 <div class="work_unit">
                     <p>ロゴ、ポスター、印刷物、名刺、<br>その他ご相談ください</p>
                 </div>
-                <div class="top_img mask_graphic"><a href=""><img src="images/top_work_01.jpg" alt=""></a>
-                    <div class="hover_mask">
+                <div class="top_img mask_graphic">
+                    <div><img src="images/top_work_01.jpg" alt=""></div>
+                    <a href="" class="hover_mask">
                         <p>
                             グラフィックを見る
                         </p>
-                    </div>
+                    </a>
                 </div>
 
             </div>
-            <h3 class="work_title web">web</h3>
+            <h3 class="work_title web">Web</h3>
             <div class="work_box">
                 <div class="web_title">
                     <h4>デザイン</h4>
@@ -114,14 +135,22 @@
                     <h4>コーディング</h4>
                     <p class="web_unit">HTML,CSS,jQueryを使い<br>シンプルで動きのあるサイトで<br>ワンランク上のサイトに仕上げます</p>
                 </div>
-                <div class="top_img"><img src="images/top_work_02.jpg" alt=""></div>
+                <div class="top_img mask_graphic">
 
+                    <div class="top_img"><img src="images/top_work_02.jpg" alt=""></div>
+                    <a href="" class="hover_mask mask_web">
+                        <p>
+                            Webを見る
+                        </p>
+                    </a>
+                </div>
             </div>
             <div class="btn_more">
                 <a href="#" class="btnarrow">more</a>
             </div>
         </section>
         <section id="skills" class="skills inner">
+            <div class="side"><img src="images/side_skills.png" alt=""></div>
             <h2><img src="images/skills@2x.png" alt="skills"></h2>
             <p class="under_text">できること</p>
             <p class="sub_text">お客様の環境に応じて対応させて頂きます</p>
@@ -138,6 +167,8 @@
             </ul>
         </section>
         <section id="favorite" class="favorite">
+            <div class="side"><img src="images/side_favorite.png" alt=""></div>
+
             <div class="favorite_inner">
                 <h2><img src="images/favorite@2x.png" alt="favorite"></h2>
                 <p class="under_text">好きなこと</p>
@@ -167,14 +198,16 @@
 
                     <li>
                         <h3>育てる</h3>
-                        <div class="favorite_icon"><img src="images/top_icon_04@2x.png" alt="おたまのイラスト"></div>
+                        <div class="favorite_icon favorite_icon_otama"><img src="images/top_icon_04_a@2x.png"
+                                alt="おたまのイラスト"></div>
                         <p>発酵食品</p>
                     </li>
 
 
                     <li>
                         <h3>行く</h3>
-                        <div class="favorite_icon"><img src="images/top_icon_05@2x.png" alt="地図のイラスト"></div>
+                        <div class="favorite_icon favorite_icon_map"><img src="images/top_icon_05_a@2x.png"
+                                alt="地図のイラスト"></div>
                         <p>お店開拓</p>
                     </li>
 
@@ -185,6 +218,8 @@
             </div>
         </section>
         <section id="vision" class="vision inner">
+            <div class="side"><img src="images/side_vision.png" alt=""></div>
+
             <h2><img src="images/vision@2x.png" alt="vision"></h2>
             <p class="under_text">これから</p>
             <div class="vision_box">
@@ -224,6 +259,22 @@
         <p class="footer_copy"><small>&copy;mamacocodesign</small></p>
     </footer>
 
+    <script>
+        $(function () {
+            //ここの中に記述
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle('');
+                $('.sp_btn').toggleClass('open');
+
+            });
+            $('#page-link a[href*="#"]').click(function () {
+                var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+                var pos = $(elmHash).offset().top - 89;//idの上部の距離からHeaderの高さを引いた値を取得
+                $('body,html').animate({ scrollTop: pos }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
