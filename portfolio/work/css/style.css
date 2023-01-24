@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* work */
+.title_inner {
+    padding-top: 89px;
+    position: relative;
+}
+.side_title {
+    width: 40px;
+    margin-top: 80px;
+}
+.title_inner h2 {
+    position: absolute;
+    width: 92px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page_title {
+    display: flex;
+    flex-direction: column;
+}
+.page_title .under_text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.work_nav ul {
+    display: flex;
+    justify-content: end;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.work_nav ul li {
+    padding-right: 50px;
+    padding-left: 5px;
+    margin-bottom: 50px;
+}
+.work_nav ul li:last-child {
+    padding-right: 10px;
+}
+.work_nav ul li:first-child {
+    border-left: 3px solid #99918e;
+}
+.Graphic {
+    border-left: 6px solid #99918e;
+}
+.work_nav ul li:nth-child(2) {
+    border-left: 3px solid #80af9f;
+}
+.web {
+    border-left: 6px solid #80af9f;
+}
+.work_nav ul li:last-child {
+    border-left: 3px solid #4c4e5f;
+}
+.others {
+    border-left: 6px solid #4c4e5f;
+}
+
+.work_inner {
+    margin-bottom: 55px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.work_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.work_img {
+    width: 460px;
+    position: relative;
+}
+h4 {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 15px;
+}
+h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    padding-left: 5px;
+}
+.work_item {
+    position: relative;
+    margin-bottom: 50px;
+}
+.hover_mask {
+    width: 430px;
+    height: 300px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #f5f5f5;
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+}
+.hover_mask:hover {
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.mask_text {
+    line-height: 1.5;
+}
+/* 矢印 */
+.lead_flow {
+    margin-top: 80px;
+}
+.lead_contact {
+    margin-top: 150px;
+}

@@ -70,7 +70,7 @@
                         <div class="about_deco"><img src="images/onlyone.png" alt="only one"></div>
                         <div class="about_title">
                             <h3>あなただけのデザイン</h3>
-                            <div class="about_number"><img src="images/pc_01.png" alt="01"></div>
+                            <div class="about_number about_number_f"><img src="images/pc_01.png" alt="01"></div>
                         </div>
                         <p class="about_text">伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
                         </p>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="top_img mask_graphic">
                     <div><img src="images/top_work_01.jpg" alt=""></div>
-                    <a href="" class="hover_mask">
+                    <a href="work/index.html#graphic" class="hover_mask">
                         <p>
                             グラフィックを見る
                         </p>
@@ -138,7 +138,7 @@
                 <div class="top_img mask_graphic">
 
                     <div class="top_img"><img src="images/top_work_02.jpg" alt=""></div>
-                    <a href="" class="hover_mask mask_web">
+                    <a href="work/index.html#web" class="hover_mask mask_web">
                         <p>
                             Webを見る
                         </p>
@@ -146,8 +146,9 @@
                 </div>
             </div>
             <div class="btn_more">
-                <a href="#" class="btnarrow">more</a>
+                <a href="work/index.html" class="btnarrow">more</a>
             </div>
+
         </section>
         <section id="skills" class="skills inner">
             <div class="side"><img src="images/side_skills.png" alt=""></div>
@@ -173,8 +174,8 @@
                 <h2><img src="images/favorite@2x.png" alt="favorite"></h2>
                 <p class="under_text">好きなこと</p>
                 <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;ってこんな人</p>
-                <ul>
 
+                <ul class="regular">
                     <li>
                         <h3>描く</h3>
                         <div class="favorite_icon"><img src="images/top_icon_01@2x.png" alt="ペン先のイラスト"></div>
@@ -211,6 +212,42 @@
                         <p>お店開拓</p>
                     </li>
 
+                </ul>
+                <ul class="large">
+                    <li>
+                        <h3>描<span>く</span></h3>
+                        <p class="large_comment">子供のラクガキをグッツにしたり、
+                            毎日を楽しく過ごせるイラストを描いています</p>
+                        <div class="large_icon"><img src="images/top_icon_06_a@2x.png" alt="ペン先のイラスト">
+                        </div>
+                        <p class="large_text">イラスト</p>
+                    </li>
+                    <li>
+                        <h3>考<span>える</span></h3>
+                        <p class="large_comment">やっぱり紙の素材を感じていたい。誕生日やイベント毎に無心で作っています</p>
+                        <div class="large_icon"><img src="images/top_icon_07_a@2x.png" alt="ハサミのイラスト">
+                        </div>
+                        <p class="large_text">工作</p>
+                    </li>
+                    <li>
+                        <h3>食<span>べる</span></h3>
+                        <p class="large_comment">旬の食材を美味しく食材の栄養を引き出し、カラダが喜ぶ食生活を送っています</p>
+                        <div class="large_icon"><img src="images/top_icon_08@2x.png" alt="お茶碗のイラスト"></div>
+                        <p class="large_text">料理</p>
+                    </li>
+                    <li>
+                        <h3>育<span>てる</span></h3>
+                        <p class="large_comment">梅干しに味噌やぬか漬け、日本の伝統食で家族の健康を支えます</p>
+                        <div class="large_icon"><img src="images/top_icon_09@2x.png" alt="おたまのイラスト"></div>
+                        <p class="large_text">発酵食品</p>
+                    </li>
+                    <li>
+                        <h3>行<span>く</span></h3>
+                        <p class="large_comment">未知の中部地区で行ってみたい所やりたい事だらけです</p>
+                        <div class="large_icon"><img src="images/top_icon_10@2x.png" alt="地図のイラスト">
+                        </div>
+                        <p class="large_text">お店開拓</p>
+                    </li>
                 </ul>
                 <div class="btn_more">
                     <a href="#" class="btnarrow favorite_btn">coming soon</a>
@@ -256,7 +293,7 @@
             <li><a href=""><img src="images/instagram_icon_02.png" alt="instagram"></a></li>
             <li><a href=""><img src="images/twitter_icon_02@2x.png" alt="twitter"></a></li>
         </ul>
-        <p class="footer_copy"><small>&copy;mamacocodesign</small></p>
+        <p class="footer_copy"><small>&copy;mamacoco&nbsp;design</small></p>
     </footer>
 
     <script>
@@ -272,6 +309,12 @@
                 var pos = $(elmHash).offset().top - 89;//idの上部の距離からHeaderの高さを引いた値を取得
                 $('body,html').animate({ scrollTop: pos }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
                 return false;
+            });
+            $('.large').hide();
+            $('li:first-child').on('click', function () {
+                $('.li:first-child').fadeOut();
+                $('.large').fadeIn();
+
             });
         });
     </script>

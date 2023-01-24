@@ -99,6 +99,9 @@
     left: 34%;
     width: 118px;
 }
+.about_number_f {
+    width: 30%;
+}
 .about_deco {
     width: 82px;
     height: 52px;
@@ -135,6 +138,7 @@
     position: sticky;
     left: 0;
     top: 0;
+    float: left;
 }
 /* work */
 .work h2 {
@@ -205,60 +209,6 @@
 .mask_web {
     border: solid 15px #86a7a9;
 }
-.btnarrow {
-    /*矢印と下線の基点とするためrelativeを指定*/
-    position: relative;
-    /*形状*/
-    display: inline-block;
-    padding: 0 75px;
-    color: #2c2f43;
-    text-decoration: none;
-    outline: none;
-}
-
-/*矢印と下線の形状*/
-.btnarrow::before {
-    content: "";
-    /*絶対配置で下線の位置を決める*/
-    position: absolute;
-    bottom: -8px;
-    left: 15%;
-    /*下線の形状*/
-    width: 85%;
-    height: 1px;
-    background: #2c2f43;
-    /*アニメーションの指定*/
-    transition: all 0.3s;
-}
-
-.btnarrow::after {
-    content: "";
-    /*絶対配置で矢印の位置を決める*/
-    position: absolute;
-    bottom: -3px;
-    right: 0;
-    /*矢印の形状*/
-    width: 15px;
-    height: 1px;
-    background: #2c2f43;
-    transform: rotate(35deg);
-    /*アニメーションの指定*/
-    transition: all 0.3s;
-}
-
-/*hoverした際の移動*/
-.btnarrow:hover::before {
-    left: 20%;
-}
-
-.btnarrow:hover::after {
-    right: -5%;
-}
-.btn_more {
-    text-align: end;
-    margin-top: 120px;
-    margin-right: -20px;
-}
 
 /* skills */
 .skills h2 {
@@ -311,13 +261,13 @@
 .favorite .sub_text {
     color: #f5f5f5;
 }
-.favorite ul {
+.favorite .regular {
     display: flex;
     justify-content: space-between;
     width: 680px;
     margin: 0 auto;
 }
-.favorite ul li {
+.favorite .regular li {
     position: relative;
     background: #f5f5f5;
     border-radius: 25px;
@@ -325,7 +275,7 @@
     height: 110px;
     margin-top: 120px;
 }
-.favorite ul li h3 {
+.favorite .regular li h3 {
     position: absolute;
     top: -20%;
     left: 50%;
@@ -333,7 +283,7 @@
     font-weight: normal;
     transform: translate(-50%, -50%);
 }
-.favorite ul li p {
+.favorite .regular li p {
     text-align: center;
     margin-top: 80px;
 }
@@ -350,6 +300,76 @@
 }
 .favorite_icon_map {
     width: 53px;
+}
+/* ホバーした時の要素 */
+.favorite .large {
+    display: flex;
+    justify-content: space-between;
+    /* width: 800px; */
+    margin: 0 auto;
+    /* opacity: 0; */
+}
+/* .favorite .large li {
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 58px;
+    width: 220px;
+    height: 297px;
+    margin-top: 120px;
+}
+.favorite .large li h3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-weight: bold;
+    font-size: 45px;
+    transform: translate(-50%, -50%);
+}
+.favorite .large_comment {
+    position: relative;
+    width: 150px;
+    top: 35%;
+    left: 10%;
+}
+.favorite .large li .large_text {
+    color: #d5d5d9;
+}
+.large_icon {
+    top: 80%;
+    left: 50%;
+}
+.favorite .large li span {
+    font-size: 20px;
+} */
+.large li {
+    display: flex;
+    width: 220px;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 58px;
+    height: 297px;
+    margin-top: 120px;
+    align-items: center;
+}
+.large_icon {
+    width: 40px;
+    padding-top: 15px;
+}
+.favorite .large li .large_text {
+    color: #d5d5d9;
+}
+.favorite .large li h3 {
+    font-size: 45px;
+}
+.favorite .large li span {
+    font-size: 20px;
+}
+.favorite .large li p {
+    padding: 25px 40px 0;
+}
+.favorite .large .large_comment {
+    line-height: 1.2;
 }
 .favorite_btn {
     color: #f5f5f5;
@@ -381,75 +401,6 @@
 }
 .vision_img {
     width: 453px;
-}
-
-/* コンタクトボタン */
-.contact_btn {
-    /*矢印の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    padding: 15px 60px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    color: #f5f5f5;
-    font-weight: bold;
-    background: #86a7a9;
-    letter-spacing: 0.1em;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s linear;
-}
-
-.contact_btn:hover {
-    background: #808e99;
-    color: #f5f5f5;
-}
-
-/*矢印と下線の形状*/
-.contact_btn::before {
-    content: "";
-    /*絶対配置で下線の位置を決める*/
-    position: absolute;
-    top: 80%;
-    right: -26px;
-    /*下線の形状*/
-    width: 70px;
-    height: 1px;
-    background: #333;
-    /*アニメーションの指定*/
-    transition: all 0.2s linear;
-}
-
-.contact_btn::after {
-    content: "";
-    /*絶対配置で矢印の位置を決める*/
-    position: absolute;
-    top: 56%;
-    right: -21px;
-    /*矢印の形状*/
-    width: 1px;
-    height: 12px;
-    background: #333;
-    transform: skewX(45deg);
-    /*アニメーションの指定*/
-    transition: all 0.2s linear;
-}
-
-/*hoverした際の移動*/
-.contact_btn:hover::before {
-    right: -30px;
-}
-
-.contact_btn:hover::after {
-    right: -25px;
-}
-.contact_inner {
-    text-align: center;
-    margin-bottom: 100px;
-}
-.contact_text {
-    margin-top: 20px;
 }
 
 #page_top {
