@@ -2,7 +2,7 @@
 
 /* work */
 .title_inner {
-    padding-top: 89px;
+    padding-top: 200px;
     position: relative;
 }
 .side_title {
@@ -116,4 +116,73 @@ h3 {
 }
 .lead_contact {
     margin-top: 150px;
+}
+.a {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* how to orderページ */
+.flowchart_title {
+    display: flex;
+    margin-left: 165px;
+    margin-bottom: 85px;
+}
+.flowchart_inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.flowchart_title h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.flowchart_title p {
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.icon_img {
+    width: 70px;
+    position: relative;
+}
+.icon_img::after {
+    content: "";
+    position: absolute;
+    background: #99918e;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 36px;
+    z-index: -1;
+}
+.icon_img::after:last-child {
+    content: none;
+}
+.flowchart_inner dl {
+    max-width: 1000px;
+}
+.howto_container {
+    display: flex;
+    width: 670px;
+    margin: 0 auto;
+}
+.howto_text {
+    margin-left: 100px;
+    margin-bottom: 75px;
+}
+.howto_text dt {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.howto_text dd {
+    width: 500px;
+    line-height: 2;
+}
+
+.contact_text_flow {
+    margin-bottom: 40px;
+}
+.contact_inner_flow {
+    margin-top: 80px;
 }

@@ -23,6 +23,7 @@ li {
         "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-feature-settings: "palt";
     scroll-behavior: smooth;
+    scroll-padding-top: 89px;
 }
 
 a {
@@ -68,6 +69,7 @@ body {
 .small_text {
     font-size: 12px;
 }
+
 /* ヘッダー */
 header {
     background-color: #808b96;
@@ -126,6 +128,29 @@ header {
     top: 0; /*ポジション設定topを0*/
     height: 89px; /*headerの高さを指定*/
     width: 100%; /*position:fixed;にしたため、横幅100%を設定*/
+}
+
+/* サイド */
+.side_inner {
+    width: 100%;
+    position: relative;
+}
+.side_wrapper {
+    width: 100%;
+    position: relative;
+}
+.side_heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.side_img {
+    width: 40px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding-top: 80px;
 }
 
 /* 矢印ボタン */
@@ -189,7 +214,7 @@ header {
     /*矢印の基点とするためrelativeを指定*/
     position: relative;
     /*ボタンの形状*/
-    padding: 15px 60px;
+    padding: 15px 85px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -216,7 +241,7 @@ header {
     top: 80%;
     right: -26px;
     /*下線の形状*/
-    width: 70px;
+    width: 90px;
     height: 1px;
     background: #333;
     /*アニメーションの指定*/
@@ -254,6 +279,39 @@ header {
     margin-top: 20px;
 }
 
+/* ページトップ */
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 100px;
+    bottom: 120px;
+    background: #828185;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+#page_top a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#page_top a::before {
+    position: absolute;
+    content: "";
+    border-top: 2px solid #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
 /* フッター */
 footer {
     background-color: #808b96;
