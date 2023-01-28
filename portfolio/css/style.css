@@ -82,7 +82,7 @@
 .about h2 {
     width: 158px;
     margin: 0 auto;
-    margin-top: 120px;
+    /* margin-top: 120px; */
 }
 .about_item {
     width: 340px;
@@ -191,16 +191,29 @@
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1em;
+    transform: scale(1);
 }
 .hover_mask:hover {
     transition: 0.3s;
     opacity: 0.7;
+    transform: scale(1.02);
+}
+.hover_mask p {
+    position: relative;
+    top: 10px;
+    transition: 0.3s;
+}
+.hover_mask:hover p {
+    top: 0;
 }
 .mask_web {
     border: solid 15px #86a7a9;
 }
 
 /* skills */
+.skills {
+    margin-bottom: 145px;
+}
 .skills h2 {
     width: 112px;
     margin: 0 auto;
@@ -235,6 +248,8 @@
 .favorite {
     background-color: #808f9a;
     position: relative;
+    padding-left: 40px;
+    padding-right: 10px;
 }
 .favorite_inner {
     max-width: 1000px;
@@ -374,10 +389,13 @@
 }
 
 /* vision */
+.vision {
+    margin-bottom: 150px;
+}
 .vision h2 {
     width: 110px;
     margin: 0 auto;
-    margin-top: 120px;
+    /* margin-top: 120px; */
 }
 .vision_box {
     display: flex;
