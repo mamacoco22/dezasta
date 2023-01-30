@@ -118,3 +118,7 @@ button:hover {
 .thanks_text span {
     font-size: 14px;
 }
+
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+}

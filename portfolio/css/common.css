@@ -71,7 +71,9 @@ body {
 .small_text {
     font-size: 12px;
 }
-
+.sp_only {
+    display: none;
+}
 /* ヘッダー */
 header {
     background-color: #808b96;
@@ -450,5 +452,30 @@ footer {
         font-size: 18px;
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
             "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+    .sp_nav_sns {
+        margin-top: 20px;
+    }
+}
+
+/* レスポンシブ */
+/* ヘッダー */
+@media screen and (max-width: 767px) {
+    .header_logo {
+        width: 45px;
+        margin-top: 2%;
+    }
+    .side_heading {
+        display: none;
+    }
+    .inner {
+        padding-left: 10px;
+    }
+    .btn_more {
+        margin-right: 10px;
+    }
+    /* フッター */
+    .fnav ul {
+        display: none;
     }
 }
