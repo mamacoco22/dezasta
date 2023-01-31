@@ -478,4 +478,7 @@ footer {
     .fnav ul {
         display: none;
     }
+    #page_top {
+        right: 20px;
+    }
 }
