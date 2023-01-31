@@ -116,7 +116,62 @@
                             <p class="about_text">遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
                         </section>
                     </div>
+                    <ul class="accordion-area">
+                        <li>
+                            <section>
+                                <div class="accordion-item">
+                                    <div class="accordion-deco"><img src="images/onlyone.png" alt="only one"></div>
+                                    <h3 class="accordion-title">あなただけのデザイン</h3>
+                                    <div class="accordion-number"><img src="images/pc_01.png" alt="01"></div>
+                                </div>
+                                <div class="accordion-box">
+                                    <p> 伝わるデザインを心がけています。<br>世界観を大切に唯一無二のものを<br>一緒に作りましょう
+                                    </p>
+                                </div>
 
+                            </section>
+                        </li>
+                        <li>
+                            <section>
+                                <div class="accordion-item">
+                                    <div class="accordion-deco"><img src="images/universal.png" alt="universal"></div>
+                                    <h3 class="accordion-title">優しいデザイン</h3>
+                                    <div class="accordion-number"><img src="images/pc_02.png" alt="02"></div>
+                                </div>
+                                <div class="accordion-box">
+                                    <p>アクセシビリティ向上を目指し、<br>見やすさ分かりやすさ、<br>使い勝手を意識します</p>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section>
+                                <div class="accordion-item">
+                                    <div class="accordion-deco"><img src="images/skillup.png" alt="skill up"></div>
+                                    <h3 class="accordion-title">上質なデザイン</h3>
+                                    <div class="accordion-number"><img src="images/pc_03.png" alt="03"></div>
+
+                                </div>
+                                <div class="accordion-box">
+                                    <p>オリジナリティーを追求できる探求心を忘れずに、自分のレベルをあげる為に新しい事を取り入れて常にスキルアップし、<br>上質のデザインを提供出来るように
+                                        <br>心がけています
+                                    </p>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section>
+                                <div class="accordion-item">
+                                    <div class="accordion-deco"><img src="images/essence.png" alt="essence"></div>
+                                    <h3 class="accordion-title">丁寧なデザイン</h3>
+                                    <div class="accordion-number"><img src="images/pc_04.png" alt="04"></div>
+
+                                </div>
+                                <div class="accordion-box">
+                                    <p>遊び心を忘れずに丁寧に真心込めて、<br>あなたの想いを大切に、<br>想いが伝わるように<br>愛を込めて制作させて頂きます</p>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>
@@ -356,6 +411,15 @@
             $('.favorite ul li').on('click', function () {
                 $('.favorite ul li').removeClass('is-active');
                 $(this).addClass('is-active');
+            });
+            $('.accordion-title').on('click', function () {
+                var findElm = $(this).next(".accordion-box");
+                $(findElm).slideToggle();
+                if ($(this).hasClass('close')) {
+                    $(this).removeClass('close');
+                } else {
+                    $(this).addClass('close');
+                }
             });
         });
     </script>

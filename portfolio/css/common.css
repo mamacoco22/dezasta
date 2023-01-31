@@ -384,7 +384,7 @@ footer {
     /* ハンバーガー */
     .sp_btn {
         position: absolute;
-        top: 20px;
+        top: 30px;
         right: 25px;
         display: block;
         height: 23px;
@@ -463,13 +463,13 @@ footer {
 @media screen and (max-width: 767px) {
     .header_logo {
         width: 45px;
-        margin-top: 2%;
+        margin-top: 20px;
     }
     .side_heading {
         display: none;
     }
     .inner {
-        padding-left: 10px;
+        padding: 0 10px;
     }
     .btn_more {
         margin-right: 10px;
@@ -480,5 +480,22 @@ footer {
     }
     #page_top {
         right: 20px;
+    }
+    .contact_btn {
+        padding: 15px 50px;
+    }
+    .contact_btn::before {
+        width: 75px;
+    }
+    .prev_btn {
+        padding: 15px 75px;
+    }
+
+    /* ボタン */
+    .btn_more {
+        margin-top: 70px;
+    }
+    .under_text {
+        margin-bottom: 40px;
     }
 }

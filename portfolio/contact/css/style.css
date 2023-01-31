@@ -142,6 +142,9 @@ button:hover {
     .contact_inner_adjust {
         margin-bottom: 80px;
     }
+    button {
+        padding: 15px 65px;
+    }
 
     /* thanksページ */
     .thanks_title h2 {
