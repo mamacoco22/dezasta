@@ -121,4 +121,34 @@ button:hover {
 
 /* レスポンシブ */
 @media screen and (max-width: 767px) {
+    .title_inner {
+        padding-top: 150px;
+    }
+    .outline {
+        padding-left: 10px;
+    }
+    .title_inner h2 {
+        width: 136px;
+    }
+    .form_container {
+        display: block;
+    }
+    #name,
+    #email,
+    #account,
+    #msg {
+        padding: 13px 1px;
+    }
+    .contact_inner_adjust {
+        margin-bottom: 80px;
+    }
+
+    /* thanksページ */
+    .thanks_title h2 {
+        width: 100%;
+        text-align: center;
+    }
+    .sp_only {
+        display: block;
+    }
 }
