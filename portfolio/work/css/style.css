@@ -362,4 +362,14 @@ h3 {
         top: 70px;
         left: 30px;
     }
+    .howto_container {
+        width: 100%;
+    }
+    .howto_container dd {
+        width: 100%;
+    }
+    .icon_img {
+        min-width: 60px;
+        max-width: 60px;
+    }
 }

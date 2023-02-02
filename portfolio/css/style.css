@@ -212,8 +212,13 @@
 .mask_web {
     border: solid 15px #86a7a9;
 }
-
-/* skills */
+.btn_more_flow {
+    font-size: 14px;
+}
+.btn_more + .btn_more {
+    margin-top: 60px;
+}
+/* skills  */
 .skills {
     margin-bottom: 145px;
 }
@@ -252,7 +257,7 @@
     background-color: #808f9a;
     position: relative;
     padding-left: 40px;
-    padding-right: 10px;
+    padding-right: 40px;
 }
 .favorite_inner {
     max-width: 1000px;
@@ -284,6 +289,19 @@
     width: 110px;
     height: 110px;
     /* margin-top: 120px; */
+    animation: regular 3s infinite ease-in-out 0.8s alternate;
+    transition: 1.5s ease-in-out;
+}
+@keyframes regular {
+    0% {
+        transform: translate(0, 0) rotate(-7deg);
+    }
+    50% {
+        transform: translate(0, -7px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(7deg);
+    }
 }
 .favorite .regular h3 {
     position: absolute;
@@ -327,45 +345,6 @@
     transform: translate(-50%, -50%) scale(1);
 }
 /* ホバーした時の要素 */
-/* .favorite .large {
-    display: flex;
-    justify-content: space-between; */
-/* width: 800px; */
-/* margin: 0 auto; */
-/* opacity: 0; *
-/* } */
-/* .favorite .large li {
-    position: relative;
-    background: #f5f5f5;
-    border-radius: 58px;
-    width: 220px;
-    height: 297px;
-    margin-top: 120px;
-}
-.favorite .large li h3 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    font-weight: bold;
-    font-size: 45px;
-    transform: translate(-50%, -50%);
-}
-.favorite .large_comment {
-    position: relative;
-    width: 150px;
-    top: 35%;
-    left: 10%;
-}
-.favorite .large li .large_text {
-    color: #d5d5d9;
-}
-.large_icon {
-    top: 80%;
-    left: 50%;
-}
-.favorite .large li span {
-    font-size: 20px;
-} */
 .large {
     display: flex;
     width: 220px;
@@ -435,6 +414,31 @@
 }
 .vision_img {
     width: 453px;
+}
+/* ローディング画面 */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #808f9a;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* スクロール */
+.element {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
+}
+.is-fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 /* レスポンシブ */
@@ -558,8 +562,14 @@
     }
 
     /* work */
+    .work {
+        padding: 0 40px;
+    }
     .sp_work_inner {
         margin-left: auto;
+    }
+    .work_title {
+        font-size: 24px;
     }
     .work_box {
         display: flex;
@@ -567,18 +577,21 @@
         display: block;
         text-align: left;
     }
+    .web_unit {
+        width: 100%;
+    }
     .work_unit p {
         margin-bottom: 30px;
     }
     .top_img {
-        width: 295px;
+        width: 100%;
     }
     .mask_graphic {
-        width: 295px;
+        width: 100%;
     }
     .hover_mask {
-        width: 275px;
-        height: 175px;
+        width: 100%;
+        height: 100%;
 
         position: absolute;
         top: 0;
@@ -591,12 +604,13 @@
         align-items: center;
         justify-content: center;
         letter-spacing: 0.1em;
-        transform: scale(1);
+        transform: none;
+        box-sizing: border-box;
     }
     .hover_mask:hover {
         transition: 0.3s;
         opacity: 0.7;
-        transform: scale(1.02);
+        transform: none;
     }
     .hover_mask p {
         position: relative;
@@ -632,6 +646,9 @@
         background: #86a7a9;
     }
     /* favorite */
+    .favorite ul {
+        flex-wrap: wrap;
+    }
     .favorite .regular {
         position: relative;
         background: #f5f5f5;

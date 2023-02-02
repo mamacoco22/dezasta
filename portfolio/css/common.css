@@ -56,7 +56,7 @@ body {
     margin-top: 60px;
     /* margin-bottom: 140px; */
     /* padding-left: 40px; */
-    padding: 80px 10px 0 40px;
+    padding: 80px 40px 0 40px;
 }
 .under_text {
     margin-top: 13px;
@@ -134,6 +134,47 @@ header {
     width: 100%; /*position:fixed;にしたため、横幅100%を設定*/
 }
 
+.pc_nav ul .dropdown_inner {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.pc_nav ul li:hover .dropdown_inner {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown_inner .dropdown_list {
+    width: 100px;
+    height: 50px;
+    background-color: #808f9a;
+    transition: all 0.3s;
+    position: relative;
+    margin-left: 0;
+}
+.dropdown_list::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #6b6d7b;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dropdown_list:hover {
+    background-color: #808f9a;
+}
+.dropdown_list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    padding-top: 15px;
+}
+
 /* サイド */
 .side_inner {
     width: 100%;
@@ -158,7 +199,7 @@ header {
 }
 .outline {
     padding-left: 40px;
-    padding-right: 10px;
+    padding-right: 40px;
     margin-top: 80px;
 }
 /* 矢印ボタン */
@@ -213,7 +254,7 @@ header {
 }
 .btn_more {
     text-align: end;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-right: -20px;
 }
 
@@ -490,10 +531,14 @@ footer {
     .prev_btn {
         padding: 15px 75px;
     }
+    .outline {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     /* ボタン */
     .btn_more {
-        margin-top: 70px;
+        margin-top: 20px;
     }
     .under_text {
         margin-bottom: 40px;

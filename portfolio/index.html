@@ -23,7 +23,12 @@
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#about">about me</a></li>
-                    <li><a href="#work">work</a></li>
+                    <li><a href="#work">work</a>
+                        <ul class="dropdown_inner">
+                            <li class="dropdown_list"><a href="work/index.html">実績一覧</a></li>
+                            <li class="dropdown_list"><a href="work/flowchart.html">受注の流れ</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#skills">skills</a></li>
                     <li><a href="#favorite">favorite</a></li>
                     <li><a href="#vision">vision</a></li>
@@ -47,6 +52,9 @@
 
     </header>
     <main>
+        <!-- <div class="loader">
+            <div class="loader_img_01"><img src="images/mamacoco_logo_02@2x.png" alt=""></div>
+        </div> -->
         <div class="lead_inner">
             <div class="lead_box">
                 <div class="lead_img">
@@ -76,7 +84,7 @@
                     <p class="sub_text">mamacoco&nbsp;<span class="small_text">-ままここ-</span>&nbsp;が<br
                             class="sp_only">大切にしている考え方や姿勢をご紹介します
                     </p>
-                    <div class="about_box">
+                    <div class="about_box element">
                         <section class="about_item">
                             <div class="about_deco"><img src="images/onlyone.png" alt="only one"></div>
                             <div class="about_title">
@@ -186,7 +194,7 @@
 
                     <h2><img src="images/work@2x.png" alt="work"></h2>
                     <p class="under_text">制作実績</p>
-                    <p class="sub_text">想いやコンセプトを元に、デザインさせて頂きます</p>
+                    <p class="sub_text">想いやコンセプトを元に、<br class="sp_only">デザインさせて頂きます</p>
                     <div class="sp_work_inner">
                         <h3 class="work_title graphic">Graphic</h3>
                         <div class="work_box">
@@ -223,7 +231,10 @@
                         </div>
                     </div>
                     <div class="btn_more">
-                        <a href="work/index.html" class="btnarrow">more</a>
+                        <a href="work/index.html" class="btnarrow">一覧を見る</a>
+                    </div>
+                    <div class="btn_more">
+                        <a href="work/flowchart.html" class="btnarrow btn_more_flow_text"> 受注の流れ</a>
                     </div>
 
                 </section>
@@ -412,17 +423,49 @@
                 $('.favorite ul li').removeClass('is-active');
                 $(this).addClass('is-active');
             });
-            $('.accordion-title').on('click', function () {
-                var findElm = $(this).next(".accordion-box");
-                $(findElm).slideToggle();
-                if ($(this).hasClass('close')) {
-                    $(this).removeClass('close');
-                } else {
-                    $(this).addClass('close');
-                }
+
+        });
+    </script>
+    <script>
+        $('.accordion-title').on('click', function () {
+            var findElm = $(this).next("accordion-box");
+            $(findElm).slideToggle();
+            if ($(this).hasClass('close')) {
+                $(this).removeClass('close');
+            } else {
+                $(this).addClass('close');
+            }
+        });
+    </script>
+    <!-- <script>
+        $(function () {
+            function end_loader() {
+                $('.loader').fadeOut(800);
+            }
+            $(window).on('load', function () {
+                setTimeout(function () {
+                    end_loader();
+                }, 2000)
+            })
+
+        })
+    </script> -->
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                const windowHeight = $(window).height();
+                const scroll = $(window).scrollTop();
+
+                $('.element').each(function () {
+                    const targetPosition = $(this).offset().top;
+                    if (scroll > targetPosition - windowHeight + 100) {
+                        $(this).addClass("is-fadein");
+                    }
+                });
             });
         });
     </script>
+
 </body>
 
 </html>

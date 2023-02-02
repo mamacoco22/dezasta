@@ -126,6 +126,7 @@ button:hover {
     }
     .outline {
         padding-left: 10px;
+        margin-top: 0;
     }
     .title_inner h2 {
         width: 136px;
