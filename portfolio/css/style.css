@@ -5,6 +5,7 @@
     height: 100vh;
     background-color: #808b96;
     padding-top: 90px;
+    position: relative;
 }
 .lead_box {
     display: flex;
@@ -24,7 +25,9 @@
     margin-top: 100px;
 }
 .lead_sns {
-    float: right;
+    position: absolute;
+    top: 65%;
+    right: 0;
     margin-right: 30px;
 }
 .lead_sns li {
@@ -39,25 +42,20 @@
     height: 50px;
 }
 .scrolldown span {
-    /*描画位置*/
     position: absolute;
     left: -25px;
     top: -15px;
-    /*テキストの形状*/
     color: #c1c1c1;
     font-size: 14px;
     letter-spacing: 0.05em;
 }
 .scrolldown::after {
     content: "";
-    /*描画位置*/
     position: absolute;
     top: 0;
-    /*線の形状*/
     width: 1px;
     height: 30px;
     background: #c1c1c1;
-    /*線の動き1.4秒かけて動く。永遠にループ*/
     animation: pathmove 1.4s ease-in-out infinite;
     opacity: 0;
 }
@@ -85,7 +83,6 @@
 .about h2 {
     width: 158px;
     margin: 0 auto;
-    /* margin-top: 120px; */
 }
 .about_item {
     width: 340px;
@@ -182,7 +179,6 @@
 .hover_mask {
     width: 420px;
     height: 270px;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -252,6 +248,7 @@
     border-radius: 3px;
     background: #86a7a9;
 }
+
 /* favorite */
 .favorite {
     background-color: #808f9a;
@@ -278,8 +275,6 @@
 .favorite ul {
     display: flex;
     justify-content: center;
-    /* justify-content: space-between; */
-    /* width: 680px; */
     margin: 0 auto;
 }
 .favorite .regular {
@@ -288,7 +283,6 @@
     border-radius: 25px;
     width: 110px;
     height: 110px;
-    /* margin-top: 120px; */
     animation: regular 3s infinite ease-in-out 0.8s alternate;
     transition: 1.5s ease-in-out;
 }
@@ -353,7 +347,6 @@
     background: #f5f5f5;
     border-radius: 58px;
     height: 297px;
-    /* margin-top: 120px; */
     align-items: center;
     position: absolute;
     top: 50%;
@@ -399,7 +392,6 @@
 .vision h2 {
     width: 110px;
     margin: 0 auto;
-    /* margin-top: 120px; */
 }
 .vision_box {
     display: flex;
@@ -450,6 +442,9 @@
     .lead_text {
         font-size: 18px;
     }
+    .lead_sns {
+        display: none;
+    }
 }
 @media screen and (max-width: 767px) {
     .lead_box {
@@ -495,6 +490,7 @@
     }
     .accordion-item {
         position: relative;
+        padding-top: 15px;
     }
     .accordion-item .accordion-title {
         font-size: 18px;
@@ -505,29 +501,36 @@
         position: absolute;
         display: block;
         width: 55px;
-        top: -10px;
+        top: 3px;
         left: 140px;
         /* border-top: 1px solid #434f73; */
+    }
+    .accordion-deco_uni {
+        width: 103px;
+        margin-left: -15px;
     }
     .accordion-number {
         position: absolute;
         width: 36px;
-        top: 10%;
+        top: 30%;
         left: 30px;
     }
     .accordion-box {
         display: none;
-        margin: 3% 3% 13% 15%;
+        margin: 3% 3% 13% 10%;
         padding: 3%;
     }
     .accordion-box p {
         font-size: 15px;
-        line-height: 1.25;
+        line-height: 1.85;
         text-align: center;
     }
-    /* .accordion-area section {
+    .accordion-area li {
+        border-top: 1px solid #434f73;
+    }
+    .accordion-area li:last-child {
         border-bottom: 1px solid #434f73;
-    } */
+    }
     .accordion-title::before,
     .accordion-title::after {
         position: absolute;
@@ -535,6 +538,7 @@
         width: 15px;
         height: 2px;
         background-color: #434f73;
+        transition: 0.3s;
     }
     .accordion-title::before {
         top: 48%;
@@ -546,20 +550,19 @@
         left: 300px;
         transform: rotate(90deg);
     }
-    .accordion-title.close::before {
+    /* .accordion-title.close::before {
         transform: rotate(45deg);
-    }
+    } */
 
     .accordion-title.close::after {
-        transform: rotate(-45deg);
+        transform: rotate(0);
     }
-    .accordion-title.close::before {
+    /* .accordion-title.close::before {
         transform: rotate(45deg);
-    }
-
-    .accordion-title.close::after {
+    } */
+    /* .accordion-title.close::after {
         transform: rotate(-45deg);
-    }
+    }  */
 
     /* work */
     .work {
@@ -655,7 +658,6 @@
         border-radius: 15px;
         width: 70px;
         height: 70px;
-        /* margin-top: 120px; */
     }
     .favorite .regular h3 {
         position: absolute;
@@ -705,7 +707,6 @@
         background: #f5f5f5;
         border-radius: 42px;
         height: 216px;
-        /* margin-top: 120px; */
         align-items: center;
         position: absolute;
         top: 50%;

@@ -263,9 +263,9 @@ h3 {
     .title_inner {
         padding-top: 150px;
     }
-    .outline {
+    /* .outline {
         padding-left: 10px;
-    }
+    } */
     .title_inner h2 {
         width: 92px;
     }
@@ -273,7 +273,7 @@ h3 {
         padding-right: 20px;
     }
     .work_inner {
-        padding-left: 40px;
+        padding: 0 20px;
     }
     .work_inner h3 {
         font-size: 20px;
@@ -304,7 +304,6 @@ h3 {
         right: 40px;
     }
     .lead_flow {
-        margin-right: -10px;
         margin-top: 40px;
     }
 

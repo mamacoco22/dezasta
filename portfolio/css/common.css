@@ -17,7 +17,7 @@ li {
     margin: 0;
     padding: 0;
     line-height: 1;
-    /*デフォルトの文字色、font-familyを予め当てておく*/
+
     color: #2c2f43;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
         "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -27,9 +27,8 @@ li {
 }
 
 a {
-    /*下線を消す*/
     text-decoration: none;
-    /*色を消す*/
+
     color: inherit;
     transition: 0.3s;
 }
@@ -37,7 +36,6 @@ a:hover {
     opacity: 0.5;
 }
 ul {
-    /*左の「・」を消す*/
     list-style: none;
 }
 
@@ -54,8 +52,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     margin-top: 60px;
-    /* margin-bottom: 140px; */
-    /* padding-left: 40px; */
+
     padding: 80px 40px 0 40px;
 }
 .under_text {
@@ -99,21 +96,21 @@ header {
 .pc_nav ul {
     display: flex;
 }
-.pc_nav ul li {
+.pc_nav > ul > li {
     color: #f5f5f5;
     font-size: 16px;
-    padding: 5px;
+    padding: 36px 5px;
     position: relative;
     display: inline-block;
     text-decoration: none;
 }
-.pc_nav ul li + li {
+.pc_nav > ul > li + li {
     margin-left: 55px;
 }
 /* ホバーした時の下線 */
-.pc_nav ul li::after {
+.pc_nav > ul > li a::after {
     position: absolute;
-    bottom: -8px;
+    bottom: 22px;
     left: 0;
     content: "";
     width: 100%;
@@ -123,22 +120,17 @@ header {
     transform-origin: left top;
     transition: transform 0.3s;
 }
-.pc_nav ul li:hover::after {
+.pc_nav > ul > li a:hover::after {
     transform: scale(1, 1);
 }
-/* ページ内リンクヘッダーの高さを引いてスクロール */
-#header {
-    position: fixed; /*追従ナビのためpositionをfixedにする*/
-    top: 0; /*ポジション設定topを0*/
-    height: 89px; /*headerの高さを指定*/
-    width: 100%; /*position:fixed;にしたため、横幅100%を設定*/
+.dropdown_list a:hover::after {
+    display: none;
 }
-
 .pc_nav ul .dropdown_inner {
     display: none;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 88px;
     left: 0;
 }
 .pc_nav ul li:hover .dropdown_inner {
@@ -204,51 +196,38 @@ header {
 }
 /* 矢印ボタン */
 .btnarrow {
-    /*矢印と下線の基点とするためrelativeを指定*/
     position: relative;
-    /*形状*/
     display: inline-block;
     padding: 0 75px;
     color: #2c2f43;
     text-decoration: none;
     outline: none;
 }
-
-/*矢印と下線の形状*/
 .btnarrow::before {
     content: "";
-    /*絶対配置で下線の位置を決める*/
     position: absolute;
     bottom: -8px;
     left: 15%;
-    /*下線の形状*/
     width: 85%;
     height: 1px;
     background: #2c2f43;
-    /*アニメーションの指定*/
+
     transition: all 0.3s;
 }
-
 .btnarrow::after {
     content: "";
-    /*絶対配置で矢印の位置を決める*/
     position: absolute;
     bottom: -3px;
     right: 0;
-    /*矢印の形状*/
     width: 15px;
     height: 1px;
     background: #2c2f43;
     transform: rotate(35deg);
-    /*アニメーションの指定*/
     transition: all 0.3s;
 }
-
-/*hoverした際の移動*/
 .btnarrow:hover::before {
     left: 20%;
 }
-
 .btnarrow:hover::after {
     right: -5%;
 }
@@ -260,9 +239,7 @@ header {
 
 /* コンタクトボタン */
 .contact_btn {
-    /*矢印の基点とするためrelativeを指定*/
     position: relative;
-    /*ボタンの形状*/
     padding: 15px 85px;
     display: inline-block;
     text-align: center;
@@ -272,51 +249,37 @@ header {
     background: #86a7a9;
     letter-spacing: 0.1em;
     outline: none;
-    /*アニメーションの指定*/
     transition: all 0.2s linear;
 }
-
 .contact_btn:hover {
     background: #86a7a9;
     color: #2c2f43;
     opacity: 1;
 }
-
-/*矢印と下線の形状*/
 .contact_btn::before {
     content: "";
-    /*絶対配置で下線の位置を決める*/
     position: absolute;
     top: 80%;
     right: -26px;
-    /*下線の形状*/
     width: 90px;
     height: 1px;
     background: #2c2f43;
-    /*アニメーションの指定*/
     transition: all 0.2s linear;
 }
-
 .contact_btn::after {
     content: "";
-    /*絶対配置で矢印の位置を決める*/
     position: absolute;
     top: 56%;
     right: -21px;
-    /*矢印の形状*/
     width: 1px;
     height: 12px;
     background: #2c2f43;
     transform: skewX(45deg);
-    /*アニメーションの指定*/
     transition: all 0.2s linear;
 }
-
-/*hoverした際の移動*/
 .contact_btn:hover::before {
     right: -30px;
 }
-
 .contact_btn:hover::after {
     right: -25px;
 }
@@ -327,6 +290,7 @@ header {
 .contact_text {
     margin-top: 20px;
 }
+
 /* 一覧へ戻るボタン */
 .prev_btn {
     padding: 15px 85px;
@@ -494,9 +458,22 @@ footer {
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
             "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
-    .sp_nav_sns {
-        margin-top: 20px;
+    .sp_nav ul:last-child li a {
+        padding: 10px;
     }
+    /* .sp_nav_sns {
+        display: flex;
+    /* } */
+    /* .sp_nav_sns .sp_sns_insta {
+        position: absolute;
+        top: 83%;
+        left: 45%;
+    }
+    .sp_sns_twitter {
+        position: absolute;
+        top: 83%;
+        left: 55%;
+    } */
 }
 
 /* レスポンシブ */
@@ -532,8 +509,7 @@ footer {
         padding: 15px 75px;
     }
     .outline {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 20px;
     }
 
     /* ボタン */

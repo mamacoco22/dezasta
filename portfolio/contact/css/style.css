@@ -23,7 +23,6 @@ textarea:focus {
 
 #msg {
     min-height: 250px;
-    /* min-width: 100%; */
 }
 button {
     position: relative;
